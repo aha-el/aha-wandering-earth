@@ -1,2 +1,2 @@
-# aha-wondering-earth
+# aha-wandering-earth
 an el project
