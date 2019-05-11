@@ -71,3 +71,10 @@ Welcome to Alibaba Cloud Elastic Compute Service !
 ### 其它
 
 待续。。。
+
+### 例会周期
+
+每周三晚``20:30-22:00``
+
+每周六或周日晚``20:30-22:00``
+
