@@ -1,4 +1,4 @@
-# AHA-wandering-earth
+# AHA-wondering-earth
 An el project...这是一个团队项目，属于zzn,wy,wpy,oyyc四只小菜鸡
 
 ## 开发手册
