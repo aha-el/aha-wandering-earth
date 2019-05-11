@@ -2,11 +2,11 @@
 
 ## zzn && wy
 
-完成``test-letter-g.html`` 静态页面
+完成 ``test-letter-g.html`` 静态页面
 
 ## oyyc
 
-完成``test-timeline.html``静态页面
+完成 ``test-timeline.html`` 静态页面
 
 ## wpy
 
