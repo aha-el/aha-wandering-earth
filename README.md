@@ -1,5 +1,5 @@
-# AHA-wandering-earth
-An el project
+# AHA-wondering-earth
+An el project...这是一个团队项目，属于zzn,wy,wpy,oyyc四只小菜鸡
 
 ## 开发手册
 
@@ -56,11 +56,23 @@ Welcome to Alibaba Cloud Elastic Compute Service !
 说明连接成功
 
 
-### 项目框架(自行学习)
+### 项目框架(自行学习官方手册的API)
 
-``vue.js``
+``vue.js``和``three.js``库
 
-``three.js``
+## 使用方法
+
+在[bootcdn](https://www.bootcdn.cn/)上找到所需库的script代码段,复制,在html页面中插入该<script>标签即可使用。具体API查看官方手册:
+
+[vue.js](https://cn.vuejs.org/v2/guide/index.html)
+
+[three.js](https://threejs.org/docs/)
+
+three.js库建议配合dat.gui使用方便调参，参考文档[dat.gui](http://workshop.chromeexperiments.com/examples/gui/?spm=a2c4e.11153940.blogcont688494.8.27376c0cZvRAMa#1--Basic-Usage)
+
+**此外，强调:不需要在本地安装相应的库！！！**
+
+建议的编辑器：``vscode``+各种好用的vue插件;或者``webstorm``等巴拉巴拉的。。。
 
 ### 注意事项
 
