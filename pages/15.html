@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>比邻星系</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.head{
+        margin-top: 25px;
+        color: ivory;
+        text-align: center; 
+        font-size: 70px;
+        font-family: 华文行楷;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link{
+        margin-top: 50px;
+        text-align: left;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+        body{
+            
+           background-image: url('../img/15.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+ <div id="particles-js">  
+    <div id="app" >
+        <p class="link"><a style="color: rgba(39, 2, 250, 0.801);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+      <p class="head" v-html="head" >{{head}}</p>
+      <p class="article" v-html="str">{{str}}</p>
+
+    </div>
+</div>
+  
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/stats.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<script>
+//在“head”中写标题，“article”中写文章，“notice、href”中写网页名称、链接
+var page = new Vue({
+  el: '#app',
+  data: {
+    head:"4.2光年外的新家园</br>比邻星系",
+    //空格用"&emsp;"(一个汉字空格)  换行用"</br>"
+    str: "&emsp;&emsp;比邻星C是一颗红矮星，距离太阳系仅仅4.2光年。比邻星B和地球一般大小，环绕在比邻星C的宜居带上，这个距离有利于液态水的存在。他的质量最小是地球的6倍，运行轨道距离本星系太阳1.5天文单位，所以可能非常寒冷，最低温度可达零下234度。</br>&emsp;&emsp;在整个宇宙中，比邻星算是最最接近太阳系的恒星了，其它恒星都要远得多。</br>&emsp;&emsp;红矮星是恒星发展的下一阶段，它的生命时间远比恒星长。比如我们所在的太阳系，形成于46亿年前，50亿年以后，太阳将发展成为红矮星。那么在这样的恒星系统里面，给生命发展演化的时间是非常充分的，就越有可能存在高级生命文明。</br>&emsp;&emsp;另外值得一提的是，比邻星就是《三体》中三体人的老巢。在那个故事里，三体人侵略地球的飞船速度较快，只需要400年就可以杀过来。",
+notice:"流浪地球数据库",
+  },
+  
+})
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>流浪地球(原著): 环球旅行(下)</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.head{
+        margin-top: 25px;
+        color: ivory;
+        text-align: center; 
+        font-size: 70px;
+        font-family: 华文行楷;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link{
+        margin-top: 50px;
+        text-align: left;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+      body{
+            
+            background-image: url('../img/19.jpg');
+             background-size: cover;
+             background-repeat: no-repeat;
+ 
+      }
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+ <div id="particles-js">  
+    <div id="app" >
+      <p class="link"><a style="color: rgba(39, 2, 250, 0.801);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+      <p class="head" v-html="head" >{{head}}</p>
+      <p class="article" v-html="str">{{str}}</p>
+          </div>
+</div>
+  
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/stats.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<script>
+//在“head”中写标题，“article”中写文章，“notice、href”中写网页名称、链接
+var page = new Vue({
+  el: '#app',
+  data: {
+    head:"流浪地球(原著): 环球旅行(下)",
+    //空格用"&emsp;"(一个汉字空格)  换行用"</br>"
+    str: "&emsp;&emsp;氦闪发生在0.8太阳质量（M☉）至2.0M☉的低质量恒星核心，在红巨星阶段，是非常短暂的失控热核聚变，有大量的氦经由两次电离过程成为碳（预测太阳在离开主序带12亿年后会发生）。许多罕见的失控氦融合过程也可以在白矮星吸积的表面上进行。由于这些低质量恒星在核心的氢耗尽时，还无法进行氦融合反应来抵抗引力的作用，最终会因为氦是以量子力学的简并状态压力与引力平衡，而不是以热压力阻挡引力坍缩。这种氦在核心累积到一定的比例，便会进行很激烈的氦融合（燃烧）。这一挤压的过程导致核心的温度和密度增加，最后当核心的温度达到1亿K时，会以惊人的速率扩大与反抗重力，并使温度下降（在主序带阶段因为有太多的氢，所以不会发生）。</br>&emsp;&emsp;但简并物质的基本特质是温度变化不会影响体积，因此也不受流体静力平衡的通过融合率的规则限制，非常高的密度加快了融合速率，导致失控的核反应，在持续几分内释放出相当于整个银河的能量。这纯粹是以天文物理的模型来描述，因为正常的低质量恒星，能量会被外层的大气层吸收而未能发现与观察到。这个过程结束时，物质被加热到热压力再度成为主导，因此物质会膨胀和冷却。据估计，核心的质量大约40%是电子简并氦，6%的核心转换成碳。",
+    notice:"流浪地球数据库",
+  },
+  
+})
+
+</script>
+
+
+</body>
+</html>

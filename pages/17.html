@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>流浪地球(原著): 初章</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.head{
+        margin-top: 25px;
+        color: ivory;
+        text-align: center; 
+        font-size: 70px;
+        font-family: 华文行楷;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link{
+        margin-top: 50px;
+        text-align: left;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+      body{
+            
+            background-image: url('../img/17.jpg');
+             background-size: cover;
+             background-repeat: no-repeat;
+ 
+      }
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+ <div id="particles-js">  
+    <div id="app" >
+      <p class="link"><a style="color: rgba(39, 2, 250, 0.801);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+      <p class="head" v-html="head" >{{head}}</p>
+      <p class="article" v-html="str">{{str}}</p>
+          </div>
+</div>
+  
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/stats.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<script>
+//在“head”中写标题，“article”中写文章，“notice、href”中写网页名称、链接
+var page = new Vue({
+  el: '#app',
+  data: {
+    head:"流浪地球(原著): 初章",
+    //空格用"&emsp;"(一个汉字空格)  换行用"</br>"
+    str: "&emsp;&emsp;我没见过黑夜，我没见过星星，我没见过春天、秋天和冬天。</br>&emsp;&emsp;</br>&emsp;&emsp;我出生在刹车时代结束的时候，那时地球刚刚停止转动。</br>&emsp;&emsp;</br>&emsp;&emsp;地球自转刹车用了四十二年，比联合政府的计划长了三年。妈妈给我讲过我们全家看最后一个日落的情景，太阳落得很慢，仿佛在地平线上停住了，用了三天三夜才落下去，当然，以后没有“天”也没有“夜”了，东半球在相当长的一段时间里(有十几年吧)将处于永远的黄昏中，因为太阳在地平线下并没落深，还在半边天上映出它的光芒。就在那次漫长的日落中，我出生了。</br>&emsp;&emsp;</br>&emsp;&emsp;黄昏并不意味着昏暗，地球发动机把整个北半球照得通明。地球发动机安装在亚洲和美洲大陆上，因为只有这两个大陆完整坚实的版块结构才能承受发动机对地球巨大的推力。地球发动机共有一万二千台，分布在亚洲和美洲大陆的各个平原上。从我住的地方，可以看到几百台发动机喷出的等离子体光柱。你想象一个巨大的宫殿，有雅典卫城上的神殿那么大，殿中有无数根顶天立地的巨柱，每根柱子像一根巨大的日光灯管那样发出蓝白色的强光。而你，是那巨大宫殿地板上的一个细菌，这样，你就可以想象到我所在的世界是什么样子了。其实这样描述还不是太准确，是地球发动机产生的切线推力分量刹住了地球的自转，因此地球发动机的喷射必须有一定的角度，这样天空中的那些巨型光柱是倾斜的，我们是处在一个将要倾倒的巨殿中!南半球的人来到北半球后突然置身于这个环境中，有许多人会神经失常。比这景象更可怕的是发动机带来的酷热，户外气温高达摄氏七八十度，必须穿冷却服才能外出。在这样的气温下常常会有暴雨，而发动机光柱穿过乌云时的景象简直是一场噩梦!光柱蓝白色的强光在云中散射，变成无数种色彩组成的疯狂涌动的光晕，整个天空仿佛被白热的火山岩浆所覆盖。爷爷老糊涂了，有一次被酷热折磨得实在受不了，看到下大雨喜出望外，赤膊冲出门去，我们没来得及拦住他。外面雨点已被地球发动机超高温的等离子光柱烤热，把他身上烫起了一层皮。</br>&emsp;&emsp;</br>&emsp;&emsp;但对于我们这一代在北半球出生的人来说，这一切都很自然，就如同对于刹车时代以前的人们，太阳星星和月亮那么自然，我们把那以前人类的历史都叫作前太阳时代，那真是个让人神往的黄金时代啊!",
+    notice:"流浪地球数据库",
+  },
+  
+})
+
+</script>
+
+
+</body>
+</html>

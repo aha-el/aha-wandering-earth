@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>等离子体流</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.head{
+        margin-top: 25px;
+        color: ivory;
+        text-align: center; 
+        font-size: 70px;
+        font-family: 华文行楷;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link{
+        margin-top: 50px;
+        text-align: left;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+        body{
+            
+           background-image: url('../img/12.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+ <div id="particles-js">  
+    <div id="app" >
+        <p class="link"><a style="color: rgba(39, 2, 250, 0.801);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+      <p class="head" v-html="head" >{{head}}</p>
+      <p class="article" v-html="str">{{str}}</p>
+
+    </div>
+</div>
+  
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/stats.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<script>
+//在“head”中写标题，“article”中写文章，“notice、href”中写网页名称、链接
+var page = new Vue({
+  el: '#app',
+  data: {
+    head:"等离子体流",
+    //空格用"&emsp;"(一个汉字空格)  换行用"</br>"
+    str: "&emsp;&emsp;等离子体(plasma)又叫做电浆，是由部分电子被剥夺后的原子及原子团被电离后产生的正负离子组成的离子化气体状物质，尺度大于德拜长度的宏观电中性电离气体，其运动主要受电磁力支配，并表现出显著的集体行为。它广泛存在于宇宙中，常被视为是除去固、液、气外，物质存在的第四态。等离子体是一种很好的导电体，利用经过巧妙设计的磁场可以捕捉、移动和加速等离子体。</br>&emsp;&emsp;在自然界里，炽热烁烁的火焰、光辉夺目的闪电、以及绚烂壮丽的极光等都是等离子体作用的结果。对于整个宇宙来讲，几乎99.9%以上的物质都是以等离子体态存在的，如恒星和行星际空间等都是由等离子体组成的。用人工方法，如核聚变、核裂变、辉光放电及各种放电都可产生等离子体。",
+notice:"流浪地球数据库",
+  },
+  
+})
+
+</script>
+
+
+</body>
+</html>

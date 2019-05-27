@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>木星（Jupiter）</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.head{
+        margin-top: 25px;
+        color: ivory;
+        text-align: center; 
+        font-size: 70px;
+        font-family: 华文行楷;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link{
+        margin-top: 50px;
+        text-align: left;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+        body{
+            
+           background-image: url('../img/8.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+ <div id="particles-js">  
+    <div id="app" >
+        <p class="link"><a style="color: rgba(39, 2, 250, 0.801);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+      <p class="head" v-html="head" >{{head}}</p>
+      <p class="article" v-html="str">{{str}}</p>
+
+    </div>
+</div>
+  
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/stats.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<script>
+//在“head”中写标题，“article”中写文章，“notice、href”中写网页名称、链接
+var page = new Vue({
+  el: '#app',
+  data: {
+    head:"木星（Jupiter）",
+    //空格用"&emsp;"(一个汉字空格)  换行用"</br>"
+    str: "&emsp;&emsp;木星(Jupiter)，是太阳系八大行星中体积最大、自转最快的行星，从内向外的第五颗行星。它的质量为太阳的千分之一，是太阳系中其它七大行星质量总和的2.5倍。木星与土星、天王星、海王星皆属气体行星，因此四者又合称类木行星(木星和土星合称巨行星)。木星是一个气态巨行星，主要由氢组成，其次为氦，占总质量的25%，占所有太阳系行星的70%岩核则含有其他较重的元素。气态行星没有实体表面，它们的气态物质密度随深度的变大而不断加大。人类所看到的通常是大气中云层的顶端，压强比1个大气压略高。</br>&emsp;&emsp;木星是一颗气态巨行星，是不以岩石或其他固体为主要成分构成的大行星。它的密度低，体积庞大，自转线速度为48280km/h，这个速度是什么概念呢？要知道地球自转速度是466m/小时，换算一下大概就是人类坐轮椅和开玛莎拉蒂的区别吧。</br>&emsp;&emsp;而地球如果落在木星上，恐怕连一个坑都填不满，木星是当之无愧的“巨无霸”",
+notice:"流浪地球数据库",
+  },
+  
+})
+
+</script>
+
+
+</body>
+</html>
