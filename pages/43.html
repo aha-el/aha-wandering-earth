@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>最后的庇护——地下城</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.head{
+        margin-top: 25px;
+        color: ivory;
+        text-align: center; 
+        font-size: 70px;
+        font-family: 华文行楷;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link{
+        margin-top: 50px;
+        text-align: left;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+      p.link2{
+        margin-bottom: 50px;
+        text-align: right;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+        body{
+            
+           background-image: url('../img/43.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+ <div id="particles-js">  
+    <div id="app" >
+        <p class="link"><a style="color: rgba(39, 2, 250, 0.801);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+      <p class="head" v-html="head" >{{head}}</p>
+      <p class="article" v-html="str">{{str}}</p>
+      <p class="link2"><a style="color: rgba(39, 2, 250, 0.904);"href="../pages/44.html" >太空电梯</a></p>
+
+    </div>
+</div>
+  
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/stats.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<script>
+//在“head”中写标题，“article”中写文章，“notice、href”中写网页名称、链接
+var page = new Vue({
+  el: '#app',
+  data: {
+    head:"最后的庇护</br>地下城",
+    //空格用"&emsp;"(一个汉字空格)  换行用"</br>"
+    str: "&emsp;&emsp;我们的家园——地球，因为太阳系即将出现的“大灾变”，停止自转、逃离太阳，从而导致地球地表环境极其恶化，高温、暴雨、寒潮、风暴等极端天气频繁发生，海平面上升淹没大片土地……在地球进入“逃逸时代”后，地表环境已不宜居住，通过抽签，35亿人进入了地下城。</br>&emsp;&emsp;在影片中，人们通过从土壤中提取氧气，为地下城提供循环空气；通过模拟自然光，地下城可以耕种作物。生活方面，这里用全息屏营造蓝天绿树，帮助人们回忆太阳“健康”时的“黄金时代”岁月；在北京地下城里，麻将馆人声鼎沸，烤串店食客络绎不绝——尽管主要烤制的食材已经变成了蚯蚓干。</br>&emsp;&emsp;春节来临，贴福字、舞狮子、吃饺子样样不少。要回到地表工作，人们需通过竖井里的高速电梯，走完超过5000米的旅程。",
+    notice:"流浪地球数据库",
+  },
+  
+})
+
+</script>
+
+
+</body>
+</html>

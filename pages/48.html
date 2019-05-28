@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人物介绍:刘慈欣</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.head{
+        margin-top: 25px;
+        color: ivory;
+        text-align: center; 
+        font-size: 70px;
+        font-family: 华文行楷;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link{
+        margin-top: 50px;
+        text-align: left;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+      p.link2{
+        margin-bottom: 50px;
+        text-align: right;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+        body{
+            
+           background-image: url('../img/48.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+ <div id="particles-js">  
+    <div id="app" >
+        <p class="link"><a style="color: rgba(39, 2, 250, 0.801);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+      <p class="head" v-html="head" >{{head}}</p>
+      <p class="article" v-html="str">{{str}}</p>
+      <p class="link2"><a style="color: rgba(39, 2, 250, 0.904);"href="../pages/49.html" >郭帆</a></p>
+
+    </div>
+</div>
+  
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/stats.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<script>
+//在“head”中写标题，“article”中写文章，“notice、href”中写网页名称、链接
+var page = new Vue({
+  el: '#app',
+  data: {
+    head:"亚洲首位雨果奖得主</br>刘慈欣",
+    //空格用"&emsp;"(一个汉字空格)  换行用"</br>"
+    str: "&emsp;&emsp;喝茶看报熬心性，闲来提笔擎破天。</br>&emsp;&emsp;娘子关前一散仙，不求闻达身自安。</br>&emsp;&emsp;刘慈欣，男，汉族，1963年6月出生，1985年10月参加工作，山西阳泉人，本科学历，高级工程师，科幻作家，中国作协会员，山西省作协会员，阳泉市作协副主席，中国科幻小说代表作家之一。</br>&emsp;&emsp;要作品包括7部长篇小说，9部作品集，16篇中篇小说，18篇短篇小说，以及部分评论文章。代表作有长篇小说《超新星纪元》、《球状闪电》、《三体》三部曲等，中短篇小说《流浪地球》、《乡村教师》、《朝闻道》、《全频带阻塞干扰》等。其中《三体》三部曲被普遍认为是中国科幻文学的里程碑之作，将中国科幻推上了世界的高度。</br>&emsp;&emsp;2014年11月，出任电影《三体》的监制。2015年8月23日，凭借科幻小说《三体》获第73届雨果奖最佳长篇故事奖，这是亚洲人首次获得雨果奖。10月18日，凭借《三体》获第六届全球华语科幻文学最高成就奖，并被授予特级华语科幻星云勋章，该等级勋章只有获得国际最高科幻奖项雨果奖和星云奖的作家有资格获取。2016年3月，当选山西省作协副主席。同月，以1000万元版税收入位列第十届作家榜第11位。2017年6月25日，凭借《三体3：死神永生》获得轨迹奖最佳长篇科幻小说奖。2018日11月8日获得克拉克奖想象力服务社会奖。2019年2月5日，刘慈欣作品改编电影《流浪地球》和《疯狂的外星人》上映。",
+    notice:"流浪地球数据库",
+  },
+  
+})
+
+</script>
+
+
+</body>
+</html>

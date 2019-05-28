@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人类的怀疑</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.head{
+        margin-top: 25px;
+        color: ivory;
+        text-align: center; 
+        font-size: 70px;
+        font-family: 华文行楷;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link{
+        margin-top: 50px;
+        text-align: left;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+      p.link2{
+        margin-bottom: 50px;
+        text-align: right;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+        body{
+            
+           background-image: url('../img/32.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+ <div id="particles-js">  
+    <div id="app" >
+        <p class="link"><a style="color: rgba(39, 2, 250, 0.801);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+      <p class="head" v-html="head" >{{head}}</p>
+      <p class="article" v-html="str">{{str}}</p>
+      <p class="link2"><a style="color: rgba(39, 2, 250, 0.904);"href="../pages/33.html" >人民的暴动</a></p>
+
+    </div>
+</div>
+  
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/stats.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<script>
+//在“head”中写标题，“article”中写文章，“notice、href”中写网页名称、链接
+var page = new Vue({
+  el: '#app',
+  data: {
+    head:"流浪地球第三章：叛乱</br>人类的怀疑",
+    //空格用"&emsp;"(一个汉字空格)  换行用"</br>"
+    str: "&emsp;&emsp;人们长出了一口气。但预料中的狂欢并没有出现，接下来发生的事情出乎所有人的想像。</br>&emsp;&emsp;</br>&emsp;&emsp;在地下城的庆祝集会后，我一个人穿上密封服来到地面。童年时熟悉的群山已被超级挖掘机夷为平地，大地上只有裸露的岩石和坚硬的冻土，冻土上到处有白色的斑块，那是大海潮留下的盐渍。面前那座爷爷和爸爸度过了一生的曾有千万人口的大城市现在已是一片废墟，高楼钢筋外露的残骸在地球发动机光柱的蓝光中拖着长长的影子，好像是史前巨兽的化石……一次次的洪水和小行星的撞击已摧毁了地面上的一切，各大陆上的城市和植被都荡然无存，地球表面已变成火星一样的荒漠。</br>&emsp;&emsp;</br>&emsp;&emsp;这一段时间，加代子心神不定。她常常扔下孩子不管，一个人开着飞行汽车出去旅行，回来后，只是说她去了西半球。最后，她拉我一起去了。</br>&emsp;&emsp;</br>&emsp;&emsp;我们的飞行汽车以四倍音速飞行了两个小时，终于能够看到太阳了，它刚刚升出太平洋，这时看上去只有棒球大小，给冰封的洋面投下一片微弱的、冷冷的光芒。</br>&emsp;&emsp;</br>&emsp;&emsp;加代子把飞行汽车悬停在5000米的空中，然后从后面拿出了一个长长的东西，去掉封套后我看到那是一架天文望远镜，业余爱好者用的那种。加代子打开车窗，把望远镜对准太阳，让我看。</br>&emsp;&emsp;</br>&emsp;&emsp;从有色镜片中我看到了放大几百倍的太阳，我甚至清楚地看到太阳表面缓缓移动的明暗斑点，还有日球边缘隐隐约约的日珥。</br>&emsp;&emsp;</br>&emsp;&emsp;加代子把望远镜同车内的计算机联起来，把一个太阳影像采集下来。然后，她又调出了另一个太阳图像，说：“这个是四个世纪前的太阳图像。”接着，计算机对两个图像进行比较。</br>&emsp;&emsp;</br>&emsp;&emsp;“看到了吗？”加代子指着屏幕说，“它们的光度、像素排列、像素概率、层次统计等参数都完全一样！”</br>&emsp;&emsp;</br>&emsp;&emsp;我摇摇头说：“这能说明什么？一架玩具望远镜，一个低级图像处理程序，加上你这个无知的外行……别自寻烦恼了，别信那些谣言！”</br>&emsp;&emsp;</br>&emsp;&emsp;“你是个白痴。”她说着，收回望远镜，把飞行汽车向回开去。这时，在我们的上方和下方，我又远远地看到了几辆飞行汽车，同我们刚才一样悬在空中，从每辆车的车窗中都伸出一架望远镜对着太阳。</br>&emsp;&emsp;</br>&emsp;&emsp;以后的几个月中，一个可怕的说法像野火一样在全世界蔓延。越来越多的人自发地用更大型更精密的仪器观测太阳。后来，一个民间组织向太阳发射了一组探测器，它们在三个月后穿过日球。探测器发回的数据最后证实了那个事实。</br>&emsp;&emsp;</br>&emsp;&emsp;同四个世纪前相比，太阳没有任何变化。",
+notice:"流浪地球数据库",
+  },
+  
+})
+
+</script>
+
+
+</body>
+</html>

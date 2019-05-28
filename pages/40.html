@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行星发动机</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.head{
+        margin-top: 25px;
+        color: ivory;
+        text-align: center; 
+        font-size: 70px;
+        font-family: 华文行楷;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link{
+        margin-top: 50px;
+        text-align: left;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+      p.link2{
+        margin-bottom: 50px;
+        text-align: right;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+        body{
+            
+           background-image: url('../img/40.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+ <div id="particles-js">  
+    <div id="app" >
+        <p class="link"><a style="color: rgba(39, 2, 250, 0.801);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+      <p class="head" v-html="head" >{{head}}</p>
+      <p class="article" v-html="str">{{str}}</p>
+      <p class="link2"><a style="color: rgba(39, 2, 250, 0.904);"href="../pages/41.html" >国际空间站</a></p>
+
+    </div>
+</div>
+  
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/stats.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<script>
+//在“head”中写标题，“article”中写文章，“notice、href”中写网页名称、链接
+var page = new Vue({
+  el: '#app',
+  data: {
+    head:"行星发动机",
+    //空格用"&emsp;"(一个汉字空格)  换行用"</br>"
+    str: "&emsp;&emsp;联合政府为使地球脱离太阳系，前往比邻星而开发的巨型工程，共有12000台，其中有10000台行星发动机安装在北半球的亚欧大陆和美洲大陆上。另外赤道上还有2000台转向发动机。人类在北半球的亚欧大陆、美洲大陆和赤道上集中建造了无数庞大的行星发动机。行星发动机通过重聚变技术，来达到使地球移动的目的。</br>&emsp;&emsp;赤道附近有转向发动机，不直接推动地球，用以停止地球自转且辅助地球前行。</br>&emsp;&emsp;中国的北京三号发动机，就有11千米高，而位于印度尼西亚的苏拉威西三号转向发动机，规模更庞大。</br>&emsp;&emsp;2035年，地球联合政府建成了第一座行星发动机。而后，在北半球各地都建起了行星发动机。</br>&emsp;&emsp;2075年2月15日，在地球将要与木星相撞时，刘启、王磊等人到苏拉威西三号转向发动机，欲用其点燃木星，获得反推力。虽然其与新加坡一号发动机、雅加达四号发动机一起要点燃木星，但还是没能点燃。刘培强中校自己驶太空站带着30万吨燃料冲去，木星才得以被点燃，地球免于一难。",
+    notice:"流浪地球数据库",
+  },
+  
+})
+
+</script>
+
+
+</body>
+</html>

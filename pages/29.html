@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>家人陪伴的日常生活</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.head{
+        margin-top: 25px;
+        color: ivory;
+        text-align: center; 
+        font-size: 70px;
+        font-family: 华文行楷;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link2{
+        margin-bottom: 50px;
+        text-align: right;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+      p.link{
+        margin-top: 50px;
+        text-align: left;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+        body{
+            
+           background-image: url('../img/29.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+ <div id="particles-js">  
+    <div id="app" >
+        <p class="link"><a style="color: rgba(39, 2, 250, 0.801);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+      <p class="head" v-html="head" >{{head}}</p>
+      <p class="article" v-html="str">{{str}}</p>
+      <p class="link2"><a style="color: rgba(39, 2, 250, 0.904);"href="../pages/30.html" >地下城灾难</a></p>
+
+    </div>
+</div>
+  
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/stats.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<script>
+//在“head”中写标题，“article”中写文章，“notice、href”中写网页名称、链接
+var page = new Vue({
+  el: '#app',
+  data: {
+    head:"流浪地球第二章：逃逸时代</br>家人陪伴的日常生活",
+    //空格用"&emsp;"(一个汉字空格)  换行用"</br>"
+    str: "&emsp;&emsp;父亲是空军的一名近地轨道宇航员，在家的时间很少。记得在变轨加速的第五年，在地球处于远日点时，我们全家到海边去过一次。运行到远日点顶端那一天，是一个如同新年或圣诞节一样的节日，因为这时地球距太阳最远，人们都有一种虚幻的安全感。像以前到地面上去一样，我们须穿上带有核电池的全密封加热服。外面，地球发动机林立的刺目光柱是主要能看见的东西，地面世界的其它部分都淹没于光柱的强光中，也看不出变化。我们乘飞行汽车飞了很长时间，到了光柱照不到的地方，到了能看见太阳的海边。这时的太阳已成了一个棒球大小，一动不动地悬在天边，它的光芒只在自己的周围映出了一圈晨曦似的亮影，天空呈暗暗的深蓝色，星星仍清晰可见。举目望去，哪有海啊，眼前是一片白茫茫的冰原。在这封冻的大海上，有大群狂欢的人。焰火在暗蓝色的空中开放，冰冻海面上的人们以一种不正常的感情在狂欢着，到处都是喝醉了在冰上打滚的人，更多的人在声嘶力竭地唱着不同的歌，都想用自己的声音压住别人。</br>&emsp;&emsp;</br>&emsp;&emsp;“每个人都在不顾一切地过自己想过的生活，这也没有什么不好。”爸爸突然想起了一件事，“呵，忘了告诉你们，我爱上了黎星，我要离开你们和她在一起。”</br>&emsp;&emsp;</br>&emsp;&emsp;“她是谁？”妈妈平静地问。</br>&emsp;&emsp;</br>&emsp;&emsp;“我的小学老师。”我替爸爸回答。我升入中学已两年，不知道爸爸和小星老师是怎么认识的，也许是在两年前那个毕业仪式上？</br>&emsp;&emsp;</br>&emsp;&emsp;“那你去吧。”妈妈说。</br>&emsp;&emsp;</br>&emsp;&emsp;“过一阵我肯定会厌倦，那时我就回来，你看呢？”</br>&emsp;&emsp;</br>&emsp;&emsp;“你要愿意当然行。”妈妈的声音像冰冻的海面一样平稳，但很快激动起来，“啊，这一颗真漂亮，里面一定有全息散射体！”她指着刚在空中开放的一朵焰火，真诚地赞美着。</br>&emsp;&emsp;</br>&emsp;&emsp;在这个时代，人们在看四个世纪以前的电影和时都莫名其妙，他们不明白，前太阳时代的人怎么会在不关生死的事情上倾注那么多的感情。当看到男女主人公为爱情而痛苦或哭泣时，他们的惊奇是难以言表的。在这个时代，死亡的威胁和逃生的欲望压倒了一切，除了当前太阳的状态和地球的位置，没有什么能真正引起他们的注意并打动他们了。这种注意力高度集中的关注，渐渐从本质上改变了人类的心理状态和精神生活，对于爱情这类东西，他们只是用余光瞥一下而已，就像赌徒在盯着轮盘的间隙抓住几秒钟喝口水一样。</br>&emsp;&emsp;</br>&emsp;&emsp;过了两个月，爸爸真从小星老师那儿回来了，妈妈没有高兴，也没有不高兴。</br>&emsp;&emsp;</br>&emsp;&emsp;爸爸对我说：“黎星对你印象很好，她说你是一个有创造力的学生。”</br>&emsp;&emsp;</br>&emsp;&emsp;妈妈一脸茫然：“她是谁？”</br>&emsp;&emsp;</br>&emsp;&emsp;“小星老师嘛，我的小学老师，爸爸这两个月就是同她在一起的！”</br>&emsp;&emsp;</br>&emsp;&emsp;“哦，想起来了！”妈妈摇头笑了，“我还不到四十，记忆力就成了这个样子。”</br>&emsp;&emsp;</br>&emsp;&emsp;她抬头看看天花板上的全息星空，又看看四壁的全息森林，“你回来挺好，把这些图像换换吧，我和孩子都看腻了，但我们都不会调整这玩艺儿。”</br>&emsp;&emsp;</br>&emsp;&emsp;当地球再次向太阳跌去的时候，我们全家都把这事忘了。</br>&emsp;&emsp;</br>&emsp;&emsp;有一天，新闻报道海在融化，于是我们全家又到海边去。这是地球通过火星轨道的时候，按照这时太阳的光照量，地球的气温应该仍然是很低的，但由于地球发动机的影响，地面的气温正适宜。能不穿加热服或冷却服去地面，那感觉真令人愉快。地球发动机所在的这个半球天空还是那个样子，但到达另一个半球时，真正感到了太阳的临近：天空是明朗的纯蓝色，太阳在空中已同启航前一样明亮了。可我们从空中看到海并没融化，还是一片白色的冰原。当我们失望地走出飞行汽车时，听到惊天动地的隆隆声，那声音仿佛来自这颗星球的最深处，真像地球要爆炸一样。</br>&emsp;&emsp;</br>&emsp;&emsp;“这是大海的声音！”爸爸说，“因为气温骤升，厚厚的冰层受热不均匀，这很像陆地上的地震。”</br>&emsp;&emsp;</br>&emsp;&emsp;突然，一声雷霆般尖厉的巨响插进这低沉的隆隆声中，我们后面看海的人们欢呼起来。我看到海面上裂开一道长缝，其开裂速度之快如同广阔的冰原上突然出现的一道黑色的闪电。接着在不断的巨响中，这样的裂缝一条接一条地在海冰上出现，海水从所有的裂缝中喷出，在冰原上形成一条条迅速扩散的急流……</br>&emsp;&emsp;</br>&emsp;&emsp;回家的路上，我们看到荒芜已久的大地上，野草在大片大片地钻出地面，各种花朵在怒放，嫩叶给枯死的森林披上绿装……所有的生命都在抓紧时间焕发着活力。</br>&emsp;&emsp;</br>&emsp;&emsp;随着地球和太阳的距离越来越近，人们的心也一天天揪紧了。到地面上来欣赏春色的人越来越少，大部分人都深深地躲进了地下城中，这不是为了躲避即将到来的酷热、暴雨和飓风，而是躲避那随着太阳越来越近的恐惧。有一天在我睡下后，听到妈妈低声对爸爸说：“可能真的来不及了。”</br>&emsp;&emsp;</br>&emsp;&emsp;爸爸说：“前四个近日点时也有这种谣言。”</br>&emsp;&emsp;</br>&emsp;&emsp;“可这次是真的，我是从钱德勒博士夫人口中听说的，她丈夫是航行委员会的那个天文学家，你们都知道他的。他亲口告诉她已观测到氦的聚集在加速。”</br>&emsp;&emsp;</br>&emsp;&emsp;“你听着亲爱的，我们必须抱有希望，这并不是因为希望真的存在，而是因为我们要做高贵的人。在前太阳时代，做一个高贵的人必须拥有金钱、权力或才能，而在今天只要拥有希望，希望是这个时代的黄金和宝石，不管活多长，我们都要拥有它！明天把这话告诉孩子。”;",
+notice:"流浪地球数据库",
+  },
+  
+})
+
+</script>
+
+
+</body>
+</html>

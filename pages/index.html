@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.question{
+        margin-top: 300px;
+        color: ivory;
+        margin-left: 200px;
+
+        font-size: 100px;
+        font-family: FZDaBiaoSong-B06S"
+      }
+      p.answer{
+        color: ivory;
+        line-height: 17pt;
+        margin-left: 400px;
+        font-size: 100px;
+        font-family: 华文行楷;
+        padding: 150px;
+      }
+      p.head{
+        margin-top: 150px;
+        color: ivory;
+        margin-left: 700px;
+        font-size: 70px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+      input{
+        margin-top: 50px;
+        border:0;
+        border-bottom:1 solid black;
+        padding: 20px 0px;/*设置输入框高度，也可以用height，但是用height的话，输入框的光标会置于顶部，还要设置其他样式去固定，而且还不一定会兼容很好*/
+        border-radius: 10px;
+        font-size: 20px;
+        padding-left:10px;/*让广告距离左边5个像素，一开始光标是贴着左边输入框的边缘的*/
+        background :rgba(251, 250, 250, 0.479);
+      }
+      body{
+        background-image: url('../img/index.jpg');
+        width: 100%;
+        overflow:auto;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+        background-size: cover;
+    }
+            
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+  
+ <div id="particles-js">  
+    <div id="app" >
+        <div  >
+    <p class="question" v-if="seen1">
+      请输入您的代号</br>
+      <input v-model="question" maxlength="10">
+    
+    </p>
+  </div>
+    <p class="answer" v-if="seen2" v-html="answer">{{ answer }}</p>
+    <p class="head" v-html="head" >{{head}}</p>
+    <p class="article" v-if="seen3" v-html="str2">{{str2}}</p>
+    <p class="link"><a style="color: rgba(21, 204, 180, 0.712);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+    </div>
+ 
+  </div>
+  
+  <script src="../js/particles.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/stats.js"></script>
+<!-- 因为 AJAX 库和通用工具的生态已经相当丰富，Vue 核心代码没有重复 -->
+<!-- 提供这些功能以保持精简。这也可以让你自由选择自己更熟悉的工具。 -->
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+<script>
+
+var watchExampleVM = new Vue({
+  el: '#app',
+  data: {
+    seen1:true,
+    seen2:true,
+    seen3:false,
+    head:"",
+    question: '',
+    answer: '',
+    str: "1.网站概述<&AHA采取展览馆形式，在多元变幻的呈现方式中，使用户深入理解《流浪地球》背后的物理学知识，同时伴随电影彩蛋掉落，寓教于乐，岂不妙哉？<2.网站功能<&被科幻电影圈粉，惊叹于特效、倾心于剧情，却止步于硬核知识？<&360°了解《流浪地球》，从物理学开始<&在炫酷科幻风中领略电影背后的学科魅力<&在自由选择片框中掉落彩蛋、原著选段与炫酷壁纸<&元素周期表的致敬经典，全景纸环的扭曲变换，三维矩阵的逐层呈现……<&精彩任你发现，剧情未完待续！",
+    i: 0,
+    timer: 0,
+    str2: "",
+    notice:"",
+  },
+  watch: {
+    // 如果 `question` 发生改变，这个函数就会运行
+    question: function (newQuestion, oldQuestion) {
+      this.answer = '身份核查中......'
+      this.debouncedGetAnswer()
+      this.debouncedHead()
+
+      this.debounceTyping()
+ 
+    }
+  },
+  created: function () {
+    //延时请求
+    this.debouncedGetAnswer = _.debounce(this.getAnswer, 2000)
+    this.debouncedHead=_.debounce(this.getHead, 5000)
+    this.debounceTyping=_.debounce(this.typing,7000)
+  },
+  methods: {
+    getAnswer: function () {
+      this.seen1=false
+      this.answer="欢迎您,"+this.question+"少校！"
+    },
+    getHead(){
+      this.seen2=false 
+      this.head="Wondering&nbsp;Earth"
+    },
+    typing() {
+      this.seen3=true   
+      if (this.i <= this.str.length) {
+          if(this.str.slice(this.i,this.i+1)=="&"){
+            this.str2 = this.str2 + '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp';
+            this.i++
+          }
+          else if(this.str.slice(this.i,this.i+1)=="<"){
+            this.str2 = this.str2 + '</br>';
+            this.i++
+          }
+          else{
+            this.str2 = this.str2+this.str.slice(this.i,this.i+1);
+            this.i++
+          }
+          
+        
+        this.timer = setTimeout(() => {
+            this.typing();
+        }, 30);
+      } else {
+        clearTimeout(this.timer)
+        this.notice="流浪地球数据库"
+        }
+    },
+  }
+})
+
+</script>
+
+
+</body>
+</html>

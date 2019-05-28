@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>国际空间站</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.head{
+        margin-top: 25px;
+        color: ivory;
+        text-align: center; 
+        font-size: 70px;
+        font-family: 华文行楷;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link{
+        margin-top: 50px;
+        text-align: left;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+      p.link2{
+        margin-bottom: 50px;
+        text-align: right;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+        body{
+            
+           background-image: url('../img/41.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+ <div id="particles-js">  
+    <div id="app" >
+        <p class="link"><a style="color: rgba(39, 2, 250, 0.801);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+      <p class="head" v-html="head" >{{head}}</p>
+      <p class="article" v-html="str">{{str}}</p>
+      <p class="link2"><a style="color: rgba(39, 2, 250, 0.904);"href="../pages/42.html" >太空战狼</a></p>
+
+    </div>
+</div>
+  
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/stats.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<script>
+//在“head”中写标题，“article”中写文章，“notice、href”中写网页名称、链接
+var page = new Vue({
+  el: '#app',
+  data: {
+    head:"外太空的守望者</br>国际空间站",
+    //空格用"&emsp;"(一个汉字空格)  换行用"</br>"
+    str: "&emsp;&emsp;国际空间站的设想是1983年由美国总统里根首先提出的，经过近十余年的探索和多次重新设计，直到苏联解体、俄罗斯加盟，国际空间站才于1993年完成设计，开始实施。</br>&emsp;&emsp;2018年8月30日，国际空间站出现轻微漏气，初步查找发现可能是太空微陨石撞击空间站上对接的俄飞船出现微小裂缝所致。站内6名宇航员已开始修补工作。</br>&emsp;&emsp;该空间站以美国、俄罗斯为首，包括加拿大、日本、巴西和欧空局等共16个国家参与研制。中国参与国际空间站遭到美国的反对，国际空间站筹划建设时美国反对邀请中国参与，所以中国没有成为国际空间站的启动方。美国认为太空空间站技术有军事用途，所以反对中国加入。</br>&emsp;&emsp;1994年至1998年为第一阶段——准备阶段。已顺利完成第一阶段的任务。（主要进行了9次美国航天飞机与俄罗斯和平号空间站的交会对接，取得了宝贵的经验）</br>&emsp;&emsp;此后，国际空间站的第2个组件——美国团结号节点舱于1998年12月4日由奋进号航天飞机送入轨道，并于12月7日与曙光号成功对接。第2阶段的主要目标是建成1个具有载3人能力的初期空间站。</br>&emsp;&emsp;第三阶段（2000年~2011年）为最终装配和应用阶段。国际空间站建成后，可载6人，工作寿命为15~20年。",
+    notice:"流浪地球数据库",
+  },
+  
+})
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>太阳的灭亡</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.head{
+        margin-top: 25px;
+        color: ivory;
+        text-align: center; 
+        font-size: 70px;
+        font-family: 华文行楷;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link{
+        margin-top: 50px;
+        text-align: left;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+      p.link2{
+        margin-bottom: 50px;
+        text-align: right;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+        body{
+            
+           background-image: url('../img/35.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+ <div id="particles-js">  
+    <div id="app" >
+        <p class="link"><a style="color: rgba(39, 2, 250, 0.801);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+      <p class="head" v-html="head" >{{head}}</p>
+      <p class="article" v-html="str">{{str}}</p>
+      <p class="link2"><a style="color: rgba(39, 2, 250, 0.904);"href="../pages/36.html" >流浪之行</a></p>
+
+    </div>
+</div>
+  
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/stats.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<script>
+//在“head”中写标题，“article”中写文章，“notice、href”中写网页名称、链接
+var page = new Vue({
+  el: '#app',
+  data: {
+    head:"流浪地球第三章：叛乱</br>太阳的灭亡",
+    //空格用"&emsp;"(一个汉字空格)  换行用"</br>"
+    str: "&emsp;&emsp;我的眼睛突然什么都看不见了，几秒钟后，视力渐渐恢复，冰原、海岸和岸上的人群又在眼前慢慢显影，最后完全清晰了，而且比刚才更清晰，因为这个世界现在笼罩在一片强烈的白光中，刚才我眼睛的失明正是由于这突然出现的强光的刺激。</br>&emsp;&emsp;</br>&emsp;&emsp;但星空没有重现，所有的星光都被这强光所淹没，仿佛整个宇宙都被强光融化了，这强光从太空中的一点迸发出来，那一点现在成了宇宙中心，那一点就在我刚才盯着的方向。</br>&emsp;&emsp;</br>&emsp;&emsp;太阳氦闪爆发了。</br>&emsp;&emsp;</br>&emsp;&emsp;《我的太阳》的合唱戛然而止，岸上的十几万人呆住了，似乎同海面上那些人一样，冻成了一片僵硬的岩石。</br>&emsp;&emsp;</br>&emsp;&emsp;太阳最后一次把它的光和热洒向地球。地面上的冰结的二氧化碳干冰首先融化，腾起了一阵白色的蒸汽；然后海冰表面也开始融化，受热不均的大海冰层发出惊天动地的巨响；渐渐地，照在地面上的光柔和起来，天空出现了微微的蓝色；后来，强烈的太阳风产生的极光在空中出现，苍穹中飘动着巨大的彩色光幕……</br>&emsp;&emsp;</br>&emsp;&emsp;在这突然出现的灿烂阳光下，海面上最后的地球派们仍稳稳地站着，仿佛五千多尊雕像。</br>&emsp;&emsp;</br>&emsp;&emsp;太阳爆发只持续了很短的时间，两个小时后强光开始急剧减弱，很快熄灭了。</br>&emsp;&emsp;</br>&emsp;&emsp;在太阳的位置上出现了一个暗红色球体，它的体积慢慢膨胀，最后从这里看它，已达到了在地球轨道上看到的太阳大小，那么它的实际体积已大到越出火星轨道，而水星、火星和金星这三颗地球的伙伴行星这时已在上亿度的辐射中化为一缕轻烟。</br>&emsp;&emsp;</br>&emsp;&emsp;但它已不是太阳，它不再发出光和热，看去如同贴在太空中一张冰冷的红纸，它那暗红色的光芒似乎是周围星光的散射。这就是小质量恒星演化的归宿：红巨星。</br>&emsp;&emsp;</br>&emsp;&emsp;50亿年的壮丽生涯已成为飘逝的梦幻，太阳死了。</br>&emsp;&emsp;</br>&emsp;&emsp;幸运的是，还有人活着。",
+notice:"流浪地球数据库",
+  },
+  
+})
+
+</script>
+
+
+</body>
+</html>
