@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>环球旅行下</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.head{
+        margin-top: 25px;
+        color: ivory;
+        text-align: center; 
+        font-size: 70px;
+        font-family: 华文行楷;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link{
+        margin-top: 50px;
+        text-align: left;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+      p.link2{
+        margin-bottom: 50px;
+        text-align: right;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+        body{
+            
+           background-image: url('../img/27.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+ <div id="particles-js">  
+    <div id="app" >
+        <p class="link"><a style="color: rgba(39, 2, 250, 0.801);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+      <p class="head" v-html="head" >{{head}}</p>
+      <p class="article" v-html="str">{{str}}</p>
+      <p class="link2"><a style="color: rgba(39, 2, 250, 0.904);"href="../pages/28.html" >移居地下城</a></p>
+
+    </div>
+</div>
+  
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/stats.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<script>
+//在“head”中写标题，“article”中写文章，“notice、href”中写网页名称、链接
+var page = new Vue({
+  el: '#app',
+  data: {
+    head:"流浪地球第一章：刹车时代</br>环球旅行下",
+    //空格用"&emsp;"(一个汉字空格)  换行用"</br>"
+    str: "&emsp;&emsp;以后我们就在太阳下航行了，太阳在空中越升越高，这几天凉爽下来的天气又热了起来。我正在自己的舱里昏昏欲睡，听到外面有骚乱的人声。灵儿推开门探进头来。</br>&emsp;&emsp;</br>&emsp;&emsp;“嗨，飞船派和地球派又打起来了！”</br>&emsp;&emsp;</br>&emsp;&emsp;我对这事儿不感兴趣，他们已经打了四个世纪了。但我还是到外面看了看，在那打成一团的几个男孩儿中，一眼就看出了挑起事儿的是阿东，他爸爸是个顽固的飞船派，因参加一次反联合政府的暴动，现在还被关监狱里，有其父必有其子。</br>&emsp;&emsp;</br>&emsp;&emsp;小星老师和几名粗壮的船员好不容易才拉开架，阿东鼻子血糊糊的，振臂高呼：“把地球派扔到海里去！”</br>&emsp;&emsp;</br>&emsp;&emsp;“我也是地球派，也要扔到海里去？”小星老师问。</br>&emsp;&emsp;</br>&emsp;&emsp;“地球派都扔到海里去！”阿东毫不示弱，现在，在全世界飞船派情绪又呈上升趋势，所以他们又狂起来了。</br>&emsp;&emsp;</br>&emsp;&emsp;“为什么这么恨我们？”小星老师问，其他几个飞船派小子接着喊了起来。</br>&emsp;&emsp;</br>&emsp;&emsp;“我们不和地球派傻瓜在地球上等死！“</br>&emsp;&emsp;</br>&emsp;&emsp;“我们要坐飞船走！飞船万岁！”</br>&emsp;&emsp;</br>&emsp;&emsp;……</br>&emsp;&emsp;</br>&emsp;&emsp;小星老师按了一下手腕上的全息显示器，我们面前的空中立刻显示出一幅全息图像，孩子们的注意力立刻被它吸引过去，暂时安静下来。那是一个晶莹透明的密封玻璃球，大约有十厘米直径，球里有三分之二充满了水，水中有一支小虾、一小枝珊瑚和一些绿色的藻类植物，小虾在水中悠然地游动着。小星老师说：“这是阿东的一件自然课的设计作业，小球中除了这几样东西外，还有一些看不见的细菌。它们在密封的玻璃球中相互依赖、相互作用。小虾以海藻为食，从水中摄取氧气，然后排出含有机物质的粪便和二氧化碳废气，细菌在将这些东西分解成无机物质，然后海藻利用了这些无机物质与人造阳光进行光合作用，制造营养物质，进行生长和繁殖，同时放出氧气供小虾呼吸。这样的生态循环应该能使玻璃球中的生物在只有阳光供应的情况下生生不息。这是我见过的最好的课程设计，我知道，这里面凝聚了阿东和所有飞船派孩子的梦想，这就是你们梦中飞船的缩影啊！阿东告诉我，他按照计算机中严格的数学模型，对球中每一样生物进行了基因设计，使他们的新陈代谢正好达到平衡。他坚信，球中的生命世界会长期活下去，直到小虾寿命的终点。老师们都很钟爱这件作业，我们把它放到所要求强度的人造阳光下，也坚信阿东的预测，默默地祝福他创造的这个小小的世界。但现在，时间只过去了十几天……”</br>&emsp;&emsp;</br>&emsp;&emsp;小星老师从随身带来的一个小箱子中小心翼翼地拿出了那个玻璃球，死去的小虾漂浮在水面上，水已混浊不堪，腐烂的藻类植物已失去了绿色，变成一团没有生命的毛状物覆盖在珊瑚上。</br>&emsp;&emsp;</br>&emsp;&emsp;“这个小世界死了。孩子们，谁能说出为什么？“小星老师把那个死亡的世界举到孩子们面前。</br>&emsp;&emsp;</br>&emsp;&emsp;“它太小了！”</br>&emsp;&emsp;</br>&emsp;&emsp;“说的对，太小了，小的生态系统，不管多么精确，是经不起时间的风浪的。飞船派们想象中的飞船也一样。”</br>&emsp;&emsp;</br>&emsp;&emsp;“我们的飞船可以造的像上海或纽约那么大。”阿东说，声音比刚才低了许多。</br>&emsp;&emsp;</br>&emsp;&emsp;“是的，按人类目前的技术也只能造这么大，同地球相比，这样的生态系统还是太小了，太小了。”</br>&emsp;&emsp;</br>&emsp;&emsp;“我们会找到新的行星。”</br>&emsp;&emsp;</br>&emsp;&emsp;“这连你们自己也不相信。人马座没有行星，最近的有行星的恒星在八百五十光年以外，目前人类能建造的最快的飞船也只能达到光速的百分之零点五，这样就需十七万年时间才能到那儿，飞船规模的生态系统连这十分之一的时间都维持不了。孩子们，只有像地球这样规模的生态系统，这样气势磅礴的生态循环，才能使生命万代不息！人类在宇宙间离开了地球，就像婴儿在沙漠里离开了母亲！”</br>&emsp;&emsp;</br>&emsp;&emsp;“可……老师，我们来不及的，地球来不及的，它还来不及加速到足够快，航到足够远，太阳就爆炸了！”</br>&emsp;&emsp;</br>&emsp;&emsp;“时间是够的，要相信联合政府！这我说了多少遍，如果你们还不相信，我们就退一万步说，人类将自豪地去死，因为我们尽了最大的努力！”</br>&emsp;&emsp;</br>&emsp;&emsp;人类的逃亡分为五步：第一步，用地球发动机使地球停止转动，使发动机喷口固定在地球运行的反方向；第二步，全功率开动地球发动机，使地球加速到逃逸速度，飞出太阳系；第三步，在外太空继续加速，飞向比邻星；第四步，在中途使地球重新自转，调转发动机方向，开始减速；第五步，地球泊入比邻星轨道，成为这颗恒星的卫星。人们把这五步分别称为刹车时代、逃逸时代、流浪时代I(加速)、流浪时代II(减速)、新太阳时代。</br>&emsp;&emsp;</br>&emsp;&emsp;整个移民过程将延续两千五百年时间，一百代人。</br>&emsp;&emsp;</br>&emsp;&emsp;我们的船继续航行，航到了地球黑夜的部分，在这里，阳光和地球发动机的光柱都照不到，在大西洋清凉的海风中，我们这些孩子第一次看到了星空。天啊，那是怎样的景象啊，美得让我们心碎。小星老师一手搂着我们，一手指着星空，看，孩子们，那就是半人马座，那就是比邻星，那就是我们的新家!说完她哭了起来，我们也都跟着哭了，周围的水手和船长，这些铁打的汉子也流下了眼泪。所有的人都用泪眼探望着老师指的方向，星空在泪水中扭曲抖动，唯有那个星星是不动的，那是黑夜大海狂浪中远方陆地的灯塔，那是冰雪荒原中快要冻死的孤独旅人前方隐现的火光，那是我们心中的星星，是人类在未来一百代人的苦海中唯一的希望和支撑……</br>&emsp;&emsp;</br>&emsp;&emsp;在回家的航程中，我们看到了起航的第一个信号：夜空中出现了一个巨大的彗星，那是月球。人类带不走月球，就在月球上也安装了行星发动机，把它推离地球轨道，以免在地球加速时相撞。月球上行星发动机产生的巨大慧尾使大海笼罩在一片蓝光之中，群星看不见了。月球移动产生的引力潮汐使大海巨浪冲天，我们改乘飞机向南半球的家飞去。</br>&emsp;&emsp;</br>&emsp;&emsp;起航的日子终于到了！</br>&emsp;&emsp;</br>&emsp;&emsp;我们一下飞机，就被地球发动机的光柱照得睁不开眼，这些光柱比以前亮了几倍，而且所有光柱都由倾斜变成笔直，地球发动机开到了最大功率，加速产生的百米巨浪轰鸣着滚上每个大陆，灼热的飓风夹着滚烫的水沫，在林立的顶天立地的等离子光柱间疯狂呼啸，拔起了陆地上所有的大树……这时从宇宙空间看，我们的星球也成了一个巨大的彗星，蓝色的彗尾刺破了黑暗的太空。</br>&emsp;&emsp;</br>&emsp;&emsp;地球上路了，人类上路了。</br>&emsp;&emsp;</br>&emsp;&emsp;就在起航时，爷爷去世了，他身上的烫伤已经感染。弥留之际他反复念叨着一句话。</br>&emsp;&emsp;</br>&emsp;&emsp;“啊，地球，我的流浪地球啊！”",
+notice:"流浪地球数据库",
+  },
+  
+})
+
+</script>
+
+
+</body>
+</html>

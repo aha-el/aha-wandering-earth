@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>AHA-Wondering Earth</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			html, body {
+				height: 100%;
+			}
+			body {
+				background-color: #000000;
+				margin: 0;
+				font-family: Helvetica, sans-serif;;
+				overflow: hidden;
+			}
+			a {
+				color: #ffffff;
+			}
+			#info {
+				position: absolute;
+				width: 100%;
+				color: #ffffff;
+				padding: 5px;
+				font-family: Monospace;
+				font-size: 13px;
+				font-weight: bold;
+				text-align: center;
+				z-index: 1;
+			}
+			#menu {
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+				text-align: center;
+			}
+			.element {
+				/* width: 120px;
+				height: 160px; */
+				width: 120px;
+				height: 160px;
+				box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
+				border: 1px solid rgba(127,255,255,0.25);
+				text-align: center;
+				cursor: default;
+			}
+			.element:hover {
+				box-shadow: 0px 0px 12px rgba(0,255,255,0.75);
+				border: 1px solid rgba(127,255,255,0.75);
+			}
+				.element .number {
+					position: absolute;
+					top: 20px;
+					right: 20px;
+					font-size: 12px;
+					color: rgba(127,255,255,0.75);
+				}
+				.element .symbol {
+					position: absolute;
+					top: 40px;
+					left: 0px;
+					right: 0px;
+					font-size: 60px;
+					font-weight: bold;
+					color: rgba(255,255,255,0.75);
+					text-shadow: 0 0 10px rgba(0,255,255,0.95);
+				}
+				.element .details {
+					position: absolute;
+					bottom: 15px;
+					left: 0px;
+					right: 0px;
+					font-size: 12px;
+					color: rgba(127,255,255,0.75);
+				}
+			button {
+				color: rgba(127,255,255,0.75);
+				background: transparent;
+				outline: 1px solid rgba(127,255,255,0.75);
+				border: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+			}
+			button:hover {
+				background-color: rgba(0,255,255,0.5);
+			}
+			button:active {
+				color: #000000;
+				background-color: rgba(0,255,255,0.75);
+			}
+		</style>
+	</head>
+	<body>
+		<script src="../build/three.js"></script>
+		<script src="../js/libs/tween.min.js"></script>
+		<script src="../js/controls/TrackballControls.js"></script>
+		<script src="../js/renderers/CSS3DRenderer.js"></script>
+
+		<!-- <div id="info"><a href="http://threejs.org" target="_blank" rel="noopener">three.js css3d</a> - periodic table. <a href="https://plus.google.com/113862800338869870683/posts/QcFk5HrWran" target="_blank" rel="noopener">info</a>.</div> -->
+		<div id="container" ></div>
+		<div id="menu">
+			<!-- <button id="table">TABLE</button> -->
+			<button id="sphere">BALL</button>
+			<button id="helix">Gallery</button>
+			<button id="grid">Matrix</button>
+			<button id="about">ABOUT US</button>
+		</div>
+
+		<script>
+			var table = [
+			"א", "这不是杞人忧天", "太阳氦闪", 1, 1,
+				"ה", "博弈", "种族与人性", 18, 1,
+				"צ", "一切终将逝去", "引力弹弓", 1, 2,
+				"ם", "流浪地球第一阶段", "刹车时代", 2, 2,
+				"ש", "跌落近日点", "逃逸时代", 13, 2,
+				"ऄ", "火石与燃料", "重元素巨变", 14, 2,
+				"७", "一念：毁灭与救赎", "刚体洛希极限", 15, 2,
+				"ढ", "木星", "Jupiter", 16, 2,
+				"ೞ", "", "木星大红斑", 17, 2,
+				"೩", "", "木星引力与大气", 18, 2,
+				"ಾ", "", "低温损伤VS防护服", 1, 3,
+				"ம", "", "等离子体流", 2, 3,
+				"ਰ", "红巨星太阳", "恒星演化", 13, 3,
+				"੪", "", "地球停转之日", 14, 3,
+				"੨", "4.2光年外的新家园", "比邻星系", 15, 3,
+				"ੲ", "清除陨石的武器", "反物质炸弹", 16, 3,
+				"Ж", "", "加加林时代的藏酒", 17, 3,
+				"Ҕ", "让人类永远保持理智", "确实是一种奢求", 18, 3,
+				"Ҩ", "", "\"地龙牌\"蚯蚓干", 1, 4,
+				"Ѣ", "", "充气胶囊", 2, 4,
+				"ѫ", "人类是文明的种子", "火种计划", 3, 4,
+				"ѷ", "诞于微末的英雄", "饱和式救援", 4, 4,
+				"ѿ", "跨过晨昏线，便是永夜", "黑暗无界", 5, 4,
+				"ӑ", "行车不规范", "亲人两行泪", 6, 4,
+				"ខ", "第一章：刹车时代", "流浪之初", 7, 4,
+				"១", "第一章：刹车时代", "环球旅行上", 8, 4,
+				"៳", "第一章：刹车时代", "环球旅行下", 9, 4,
+				"౨", "第二章：逃逸时代", "移居地下城", 10, 4,
+				"౯", "第二章：逃逸时代", "家人陪伴的日常生活", 11, 4,
+				"པ", "第二章：逃逸时代", "地下城灾难", 12, 4,
+				"༅", "第二章：逃逸时代", "流浪中的新家庭", 13, 4,
+				"ᛟ", "第三章：叛乱", "人类的怀疑", 14, 4,
+				"ᚧ", "第三章：叛乱", "人民的暴动", 15, 4,
+				"ᛒ", "第三章：叛乱", "对科学家的公开处决", 16, 4,
+				"ᚣ", "第三章：叛乱", "太阳的灭亡", 17, 4,
+				"ᛃ", "第四章：流浪时代", "流浪之行", 18, 4,
+				"ᚮ", "第四章：流浪时代", "希望之歌", 1, 5,
+				"⸙", "第四章：流浪时代", "结语", 2, 5,
+				"⸩", "", "机械外骨骼", 3, 5,
+				"⸕", "", "行星发动机", 4, 5,
+				"⸈", "外太空的守望者", "国际空间站", 5, 5,
+				"ᦲ", "", "太空战狼", 6, 5,
+				"ᦸ", "最后的庇护", "地下城", 7, 5,
+				"ᚖ", "", "太空电梯", 8, 5,
+				"လ", "", "运载车", 9, 5,
+				"￥", "", "春节十二响", 10, 5,
+				"&", "人类文明的真正含义", "牺牲者", 11, 5,
+				"#", "中国科幻巅峰", "刘慈欣", 12, 5,
+				"ᳱ", "小破球诞生记", "郭帆", 13, 5,
+				"ⵠ", "", "未完待续...", 14, 5,
+				];
+			var camera, scene, renderer;
+			var controls;
+			var objects = [];
+			var targets = { table: [], sphere: [], helix: [], grid: [] };
+			init();
+			animate();
+			function init() {
+				camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera.position.z = 3000;
+				scene = new THREE.Scene();
+				// table
+				for ( var i = 0; i < table.length; i += 5 ) {
+					var element = document.createElement( 'div' );
+					element.className = 'element';
+					element.style.backgroundColor = 'rgba(0,127,127,' + ( Math.random() * 0.5 + 0.25 ) + ')';
+					var number = document.createElement( 'div' );
+					number.className = 'number';
+					number.textContent = ( i / 5 ) + 1;
+					element.appendChild( number );
+					var symbol = document.createElement( 'div' );
+					symbol.className = 'symbol';
+					symbol.textContent = table[ i ];
+					element.appendChild( symbol );
+					var details = document.createElement( 'div' );
+					details.className = 'details';
+					var ai=document.createElement('a');
+					ai.href=((i/5)+1)+".html";
+					ai.innerHTML=table[ i + 1 ] + '<br>' + table[ i + 2 ];
+					details.appendChild(ai);
+					element.appendChild( details );
+					var object = new THREE.CSS3DObject( element );
+					object.position.x = Math.random() * 4000 - 2000;
+					object.position.y = Math.random() * 4000 - 2000;
+					object.position.z = Math.random() * 4000 - 2000;
+					scene.add( object );
+					objects.push( object );
+					//
+					var object = new THREE.Object3D();
+					object.position.x = ( table[ i + 3 ] * 140 ) - 1330;
+					object.position.y = - ( table[ i + 4 ] * 180 ) + 990;
+					targets.table.push( object );
+				}
+				// sphere
+				var vector = new THREE.Vector3();
+				for ( var i = 0, l = objects.length; i < l; i ++ ) {
+					var phi = Math.acos( - 1 + ( 2 * i ) / l );
+					var theta = Math.sqrt( l * Math.PI ) * phi;
+					var object = new THREE.Object3D();
+					object.position.setFromSphericalCoords( 800, phi, theta );
+					vector.copy( object.position ).multiplyScalar( 2 );
+					object.lookAt( vector );
+					targets.sphere.push( object );
+				}
+				// helix
+				var vector = new THREE.Vector3();
+				for ( var i = 0, l = objects.length; i < l; i ++ ) {
+					var theta = i * 0.175 + Math.PI;
+					var y = - ( i * 8 ) + 450;
+					var object = new THREE.Object3D();
+					object.position.setFromCylindricalCoords( 900, theta, y );
+					vector.x = object.position.x * 2;
+					vector.y = object.position.y;
+					vector.z = object.position.z * 2;
+					object.lookAt( vector );
+					targets.helix.push( object );
+				}
+				// grid
+				for ( var i = 0; i < objects.length; i ++ ) {
+					var object = new THREE.Object3D();
+					object.position.x = ( ( i % 5 ) * 400 ) - 800;
+					object.position.y = ( - ( Math.floor( i / 5 ) % 5 ) * 400 ) + 800;
+					object.position.z = ( Math.floor( i / 25 ) ) * 1000 - 2000;
+					targets.grid.push( object );
+				}
+				//
+				renderer = new THREE.CSS3DRenderer();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				document.getElementById( 'container' ).appendChild( renderer.domElement );
+				//
+				controls = new THREE.TrackballControls( camera, renderer.domElement );
+				controls.rotateSpeed = 0.5;
+				controls.minDistance = 500;
+				controls.maxDistance = 6000;
+				controls.addEventListener( 'change', render );
+				// var button = document.getElementById( 'table' );
+				// button.addEventListener( 'click', function () {
+				// 	transform( targets.table, 2000 );
+				// }, false );
+				var button = document.getElementById( 'sphere' );
+				button.addEventListener( 'click', function () {
+					transform( targets.sphere, 2000 );
+				}, false );
+				var button = document.getElementById( 'helix' );
+				button.addEventListener( 'click', function () {
+					transform( targets.helix, 2000 );
+				}, false );
+				var button = document.getElementById( 'grid' );
+				button.addEventListener( 'click', function () {
+					transform( targets.grid, 2000 );
+				}, false );
+				var button =document.getElementById('about');
+				button.addEventListener('click',function(){
+					window.location.href="../pages/about.html"
+				},false)
+				transform( targets.sphere, 2000 );
+				//
+				window.addEventListener( 'resize', onWindowResize, false );
+			}
+			function transform( targets, duration ) {
+				TWEEN.removeAll();
+				for ( var i = 0; i < objects.length; i ++ ) {
+					var object = objects[ i ];
+					var target = targets[ i ];
+					new TWEEN.Tween( object.position )
+						.to( { x: target.position.x, y: target.position.y, z: target.position.z }, Math.random() * duration + duration )
+						.easing( TWEEN.Easing.Exponential.InOut )
+						.start();
+					new TWEEN.Tween( object.rotation )
+						.to( { x: target.rotation.x, y: target.rotation.y, z: target.rotation.z }, Math.random() * duration + duration )
+						.easing( TWEEN.Easing.Exponential.InOut )
+						.start();
+				}
+				new TWEEN.Tween( this )
+					.to( {}, duration * 2 )
+					.onUpdate( render )
+					.start();
+			}
+			function onWindowResize() {
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				render();
+			}
+			function animate() {
+				requestAnimationFrame( animate );
+				TWEEN.update();
+				controls.update();
+			}
+			function render() {
+				renderer.render( scene, camera );
+			}
+		</script>
+	</body>
+</html>

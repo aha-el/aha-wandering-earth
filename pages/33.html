@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人民的暴动</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.head{
+        margin-top: 25px;
+        color: ivory;
+        text-align: center; 
+        font-size: 70px;
+        font-family: 华文行楷;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link{
+        margin-top: 50px;
+        text-align: left;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+      p.link2{
+        margin-bottom: 50px;
+        text-align: right;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+        body{
+            
+           background-image: url('../img/33.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+ <div id="particles-js">  
+    <div id="app" >
+        <p class="link"><a style="color: rgba(39, 2, 250, 0.801);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+      <p class="head" v-html="head" >{{head}}</p>
+      <p class="article" v-html="str">{{str}}</p>
+      <p class="link2"><a style="color: rgba(39, 2, 250, 0.904);"href="../pages/34.html" >公开处决</a></p>
+
+    </div>
+</div>
+  
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/stats.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<script>
+//在“head”中写标题，“article”中写文章，“notice、href”中写网页名称、链接
+var page = new Vue({
+  el: '#app',
+  data: {
+    head:"流浪地球第三章：叛乱</br>人民的暴动",
+    //空格用"&emsp;"(一个汉字空格)  换行用"</br>"
+    str: "&emsp;&emsp;现在，各大陆的地下城已成了一座座骚动的火山，局势一触即发。一天，按照联合政府的法令，我和加代子把儿子送进了养育中心。回家的路上我俩都感到维系我们关系的惟一纽带已不存在了。走到市中心广场，我们看到有人在演讲，另一些人在演讲者周围向市民分发武器。</br>&emsp;&emsp;</br>&emsp;&emsp;“公民们！地球被出卖了！人类被出卖了！文明被出卖了！我们都是一个超级骗局的牺牲品！这个骗局之巨大之可怕，上帝都会为之休克！太阳还是原来的太阳，它不会爆发，过去现在将来都不会，它是永恒的象征！爆发的是联合政府中那些人阴险的野心！他们编造了这一切，只是为了建立他们的独裁帝国！他们毁了地球！</br>&emsp;&emsp;</br>&emsp;&emsp;他们毁了人类文明！公民们，有良知的公民们！拿起武器，拯救我们的星球！拯救人类文明！我们要推翻联合政府，控制地球发动机，把我们的星球从这寒冷的外太空开回原来的轨道！开回到我们的太阳温暖的怀抱中！”</br>&emsp;&emsp;</br>&emsp;&emsp;加代子默默地走上前去，从分发武器的人手中接过了一支冲锋枪，加入到那些拿到武器的市民的队列中，她没有回头，同那支庞大的队列一起消失在地下城的迷雾里。我呆呆地站在那儿，手在衣袋中紧紧攥着父亲用生命和忠诚换来的那枚勋章，它的边角把我的手扎出了血……</br>&emsp;&emsp;</br>&emsp;&emsp;三天后，叛乱在各个大陆同时爆发了。</br>&emsp;&emsp;</br>&emsp;&emsp;叛军所到之处，人民群起响应，到现在，很少有人怀疑自己受骗了。但我加入了联合政府的军队，这并非由于对政府的坚信，而是我三代前辈都有过军旅生涯，他们在我心中种下了忠诚的种子，不论在什么情况下，背叛联合政府对我来说是一件不可想像的事。</br>&emsp;&emsp;</br>&emsp;&emsp;美洲、非洲、大洋洲和南极洲相继沦陷，联合政府收缩防线死守地球发动机所在的东亚和中亚。叛军很快对这里构成包围态势，他们对政府军占有压倒优势，之所以在相当长一段时间里攻势没有取得进展，完全是由于地球发动机。叛军不想毁掉地球发动机，所以在这一广阔的战区没有使用重武器，使得联合政府得以苟延残喘。这样双方相持了三个月，联合政府的十二个集团军相继临阵倒戈，中亚和东亚防线全线崩溃。两个月后，大势已去的联合政府连同不到十万军队在靠近海岸的地球发动机控制中心陷入重围。",
+notice:"流浪地球数据库",
+  },
+  
+})
+
+</script>
+
+
+</body>
+</html>

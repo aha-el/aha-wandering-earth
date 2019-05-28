@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对科学家的公开处决</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.head{
+        margin-top: 25px;
+        color: ivory;
+        text-align: center; 
+        font-size: 70px;
+        font-family: 华文行楷;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link{
+        margin-top: 50px;
+        text-align: left;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+      p.link2{
+        margin-bottom: 50px;
+        text-align: right;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+        body{
+            
+           background-image: url('../img/34.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+ <div id="particles-js">  
+    <div id="app" >
+        <p class="link"><a style="color: rgba(39, 2, 250, 0.801);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+      <p class="head" v-html="head" >{{head}}</p>
+      <p class="article" v-html="str">{{str}}</p>
+      <p class="link2"><a style="color: rgba(39, 2, 250, 0.904);"href="../pages/35.html" >太阳的灭亡</a></p>
+
+    </div>
+</div>
+  
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/stats.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<script>
+//在“head”中写标题，“article”中写文章，“notice、href”中写网页名称、链接
+var page = new Vue({
+  el: '#app',
+  data: {
+    head:"流浪地球第三章：叛乱</br>对科学家的公开处决",
+    //空格用"&emsp;"(一个汉字空格)  换行用"</br>"
+    str: "&emsp;&emsp;我就是这残存军队中的一名少校。控制中心有一座中等城市大小，它的中心是地球驾驶室。我拖着一条被激光束烧焦的手臂，躺在控制中心的伤兵收容站里。就是在这儿，我得知加代子已在澳洲战役中阵亡。我和收容站里所有的人一样，整天喝得烂醉，对外面的战事全然不知，也不感兴趣。不知过了多久，听到有人在高声说话。</br>&emsp;&emsp;</br>&emsp;&emsp;“知道你们为什么这样吗？你们在自责，在这场战争中，你们站到了反人类的一边，我也一样。”</br>&emsp;&emsp;</br>&emsp;&emsp;我转头一看，发现讲话的人肩上有一颗将星，他接着说：“没关系的，我们还有最后的机会拯救自己的灵魂。地球驾驶室距我们这儿只有三个街区，我们去占领它，把它交给外面理智的人类！我们为联合政府已尽到了责任，现在该为人类尽责任了！”</br>&emsp;&emsp;</br>&emsp;&emsp;我用那只没受伤的手抽出手枪，随着这群突然狂热起来的受伤和没受伤的人，沿着钢铁的通道，向地球驾驶室冲去。出乎预料，一路上我们几乎没遇到抵抗，倒是有越来越多的人从错综复杂的钢铁通道的各个分支中加入我们。最后，我们来到了一扇巨大的门前，那钢铁大门高得望不到顶。它轰隆隆地打开了，我们冲进了地球驾驶室。</br>&emsp;&emsp;</br>&emsp;&emsp;尽管以前无数次在电视中看到过，所有的人还是被驾驶室的宏伟震惊了。从视觉上看不出这里的大小，因为驾驶室淹没在一幅巨型全息图中，那是一幅太阳系的模拟图。整个图像实际就是一个向所有方向无限伸延的黑色空间，我们一进来，就悬浮在这空间之中。由于尽量反映真实的比例，太阳和行星都很小很小，小得像远方的萤火虫，但能分辨出来。以那遥远的代表太阳的光点为中心，一条醒目的红色螺旋线扩展开来，像广阔的黑色洋面上迅速扩散的红色波圈。这是地球的航线。在螺旋线最外面的一点上，航线变成明亮的绿色，那是地球还没有完成的路程。那条绿线从我们的头顶掠过，顺着看去，我们看到了灿烂的星海，绿线消失在星海的深处，我们看不到它的尽头。在这广漠的黑色的空间中，还漂浮着许多闪亮的灰尘，其中几个尘粒飘近，我发现那是一块块虚拟屏幕，上面翻滚着复杂的数字和曲线。</br>&emsp;&emsp;</br>&emsp;&emsp;我看到了全人类瞩目的地球驾驶台，它好像是漂浮在黑色空间中的一个银白色的小行星，看到它我更难以把握这里的巨大——驾驶台本身就是一个广场，现在上面密密麻麻地站着五千多人，包括联合政府的主要成员、负责实施地球航行计划的星际移民委员会的大部分，和那些最后忠于政府的人。这时我听到最高执政官的声音在整个黑色空间响了起来。</br>&emsp;&emsp;</br>&emsp;&emsp;“我们本来可以战斗到底的，但这可能导致地球发动机失控，这种情况一旦发生，过量聚变的物质将烧穿地球，或蒸发全部海洋，所以我们决定投降。我们理解所有的人，因为在已经进行了四十代人、还要延续一百代人的艰难奋斗中，永远保持理智确实是一个奢求。但也请所有的人记住我们，站在这里的这五千多人，这里有联合政府的最高执政官，也有普通的列兵，是我们把信念坚持到了最后。我们都知道自己看不到真理被证实的那一天，但如果人类得以延续万代，以后所有的人将在我们的墓前洒下自己的眼泪，这颗叫地球的行星，就是我们永恒的纪念碑！”</br>&emsp;&emsp;</br>&emsp;&emsp;控制中心巨大的密封门隆隆开启，那五千多名最后的地球派一群群走了出来，在叛军的押送下向海岸走去。一路上两边挤满了人，所有人都冲他们吐唾沫，用冰块和石块砸他们。他们中有人密封服的面罩被砸裂了，外面零下一百多度的严寒使那些人的脸麻木了，但他们仍努力地走下去。我看到一个小女孩，举起一大块冰用尽全身力气狠命地向一个老者砸去，她那双眼睛透过面罩射出疯狂的怒火。</br>&emsp;&emsp;</br>&emsp;&emsp;当我听到这五千人全部被判处死刑时，觉得太宽容了。难道仅仅一死吗？这一死就能偿清他们的罪恶吗？能偿清他们用一个离奇变态的想像和骗局毁掉地球、毁掉人类文明的罪恶吗？他们应该死一万次！这时，我想起了那些做出太阳爆发预测的天体物理学家，那些设计和建造地球发动机的工程师，他们在一个世纪前就已作古，我现在真想把他们从坟墓中挖出来，让他们也死一万次。</br>&emsp;&emsp;</br>&emsp;&emsp;真感谢死刑的执行者们，他们为这些罪犯找了一种好的死法：他们收走了被判死刑的每个人密封服上加热用的核能电池，然后把他们丢在大海的冰面上，让零下百度的严寒慢慢夺去他们的生命。</br>&emsp;&emsp;</br>&emsp;&emsp;这些人类文明史上最险恶最可耻的罪犯在冰海上站了黑压压的一片，在岸上有十几万人在看着他们，十几万双牙齿咬得咔咔响，十几万双眼睛喷出和那个小女孩一样的怒火。</br>&emsp;&emsp;</br>&emsp;&emsp;这时，所有的地球发动机都已关闭，壮丽的群星出现在冰原之上。</br>&emsp;&emsp;</br>&emsp;&emsp;我能想像出严寒像无数把尖刀刺进他们的身体，他们的血液在凝固，生命从他们的体内一点点流走，这想像中的感觉变成一种快感，传遍我的全身。看到那些人在严寒的折磨中慢慢死去，岸上的人们快活起来，他们一起唱起了《我的太阳》。</br>&emsp;&emsp;</br>&emsp;&emsp;我唱着，眼睛看着星空的一个方向，在那个方向上，有一颗稍大些刚刚显出圆盘形状的星星发出黄色的光芒，那就是太阳。</br>&emsp;&emsp;</br>&emsp;&emsp;啊，我的太阳，生命之母，万物之父，我的大神，我的上帝！还有什么比您更稳定，还有什么比您更永恒。我们这些渺小的，连灰尘都不如的炭基细菌，拥挤在围着您转的一粒小石头上，竟敢预言您的末日，我们怎么能蠢到这个程度！</br>&emsp;&emsp;</br>&emsp;&emsp;一个小时过去了，海面上那些反人类的罪犯虽然还全都站着，但已没有一个活人，他们的血液已被冻结了。",
+notice:"流浪地球数据库",
+  },
+  
+})
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>流浪中的新家庭</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.head{
+        margin-top: 25px;
+        color: ivory;
+        text-align: center; 
+        font-size: 70px;
+        font-family: 华文行楷;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link{
+        margin-top: 50px;
+        text-align: left;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+      p.link2{
+        margin-bottom: 50px;
+        text-align: right;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+        body{
+            
+           background-image: url('../img/31.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+ <div id="particles-js">  
+    <div id="app" >
+        <p class="link"><a style="color: rgba(39, 2, 250, 0.801);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+      <p class="head" v-html="head" >{{head}}</p>
+      <p class="article" v-html="str">{{str}}</p>
+      <p class="link2"><a style="color: rgba(39, 2, 250, 0.904);"href="../pages/32.html" >人类的怀疑</a></p>
+
+    </div>
+</div>
+  
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/stats.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<script>
+//在“head”中写标题，“article”中写文章，“notice、href”中写网页名称、链接
+var page = new Vue({
+  el: '#app',
+  data: {
+    head:"流浪地球第二章：逃逸时代</br>流浪中的新家庭",
+    //空格用"&emsp;"(一个汉字空格)  换行用"</br>"
+    str: "&emsp;&emsp;但生活还在继续，这严酷恐惧的现实中，爱情仍不时闪现出迷人的火花。为了缓解人们的紧张情绪，在第十二次到达远日点时，联合政府居然恢复了中断达两个世纪的奥运会。我作为一名机动冰橇拉力赛的选手参加了奥运会，比赛是驾驶机动冰橇，从上海出发，从冰面上横穿封冻的太平洋，到达终点纽约。</br>&emsp;&emsp;</br>&emsp;&emsp;发令枪响过之后，上百只雪橇在冰冻的海洋上以每小时二百公里左右的速度出发了。开始还有几只雪橇相伴，但两天后，他们或前或后，都消失在地平线之外。</br>&emsp;&emsp;</br>&emsp;&emsp;这时背后地球发动机的光芒已经看不到了，我正处于地球最黑暗的部分。在我眼中，世界就是由广阔的星空和向四面无限延伸的冰原组成的，这冰原似乎一直延伸到宇宙的尽头，或者它本身就是宇宙的尽头。而在无限的星空和无限的冰原组成的宇宙中，只有我一个人！雪崩般的孤独感压倒了我，我想哭。我拼命地赶路，名次已无关紧要，只是为了在这可怕的孤独感杀死我之前尽早地摆脱它，而那想像中的彼岸似乎根本就不存在。</br>&emsp;&emsp;</br>&emsp;&emsp;就在这时，我看到天边出现了一个人影。近了些后，我发现那是一个姑娘，正站在她的雪橇旁，她的长发在冰原上的寒风中飘动着。你知道这时遇见一个姑娘意味着什么，我们的后半生由此决定了。她是日本人，叫山彬加代子。女子组比我们先出发十二个小时，她的雪橇卡在冰缝中，把一根滑杆卡断了。我一边帮她修雪橇，一边把自己刚才的感觉告诉她。</br>&emsp;&emsp;</br>&emsp;&emsp;“您说得太对了，我也是那样的感觉！是的，好像整个宇宙中就只有你一个人！</br>&emsp;&emsp;</br>&emsp;&emsp;知道吗，我看到您从远方出现时，就像看到太阳升起一样呢！”</br>&emsp;&emsp;</br>&emsp;&emsp;“那你为什么不叫救援飞机？”</br>&emsp;&emsp;</br>&emsp;&emsp;“这是一场体现人类精神的比赛，要知道，流浪地球在宇宙中是叫不到救援的！”</br>&emsp;&emsp;</br>&emsp;&emsp;她挥动着小拳头，以日本人特有的执著说。</br>&emsp;&emsp;</br>&emsp;&emsp;“不过现在总得叫了，我们都没有备用滑杆，你的雪橇修不好了。”</br>&emsp;&emsp;</br>&emsp;&emsp;“那我坐您的雪橇一起走好吗？如果您不在意名次的话。”</br>&emsp;&emsp;</br>&emsp;&emsp;我当然不在意，于是我和加代子一起在冰冻的太平洋上走完了剩下的漫长路程。</br>&emsp;&emsp;</br>&emsp;&emsp;经过夏威夷后，我们看到了天边的曙光。在被那个小小的太阳照亮的无际冰原上，我们向联合政府的民政部发去了结婚申请。</br>&emsp;&emsp;</br>&emsp;&emsp;当我们到达纽约时，这个项目的裁判们早等得不耐烦，收摊走了。但有一个民政局的官员在等着我们，他向我们致以新婚的祝贺，然后开始履行他的职责：他挥手在空中划出一个全息图像，上面整齐地排列着几万个圆点，这是这几天全世界向联合政府登记结婚的数目。由于环境的严酷，法律规定每三对新婚配偶中只有一对有生育权，抽签决定。加代子对着半空中那几万个点犹豫了半天，点了中间的一个。</br>&emsp;&emsp;</br>&emsp;&emsp;当那个点变为绿色时，她高兴得跳了起来。但我的心中却不知是什么滋味，我的孩子出生在这个苦难的时代，是幸运还是不幸呢？那个官员倒是兴高采烈，他说每当一对儿“点绿”的时候他都十分高兴，他拿出了一瓶伏特加，我们三个轮着一人一口地喝着，都为人类的延续干杯。我们身后，遥远的太阳用它微弱的光芒给自由女神像镀上了一层金辉，对面，是已无人居住的曼哈顿的摩天大楼群，微弱的阳光把它们的影子长长地投在纽约港寂静的冰面上。醉意朦胧的我，眼泪涌了出来。</br>&emsp;&emsp;</br>&emsp;&emsp;地球，我的流浪地球啊！</br>&emsp;&emsp;</br>&emsp;&emsp;分手前，官员递给我们一串钥匙，醉醺醺地说：“这是你们在亚洲分到的房子，回家吧，哦，家多好啊！”</br>&emsp;&emsp;</br>&emsp;&emsp;“有什么好的？”我漠然地说，“亚洲的地下城充满危险，这你们在西半球当然体会不到。”</br>&emsp;&emsp;</br>&emsp;&emsp;“我们马上也有你们体会不到的危险了，地球又要穿过小行星带，这次是西半球对着运行方向。”</br>&emsp;&emsp;</br>&emsp;&emsp;“上几个变轨周期也经过小行星带，不是没什么大事吗？”</br>&emsp;&emsp;</br>&emsp;&emsp;“那只是擦着小行星带的边缘走，太空舰队当然能应付，他们可以用激光和核弹把地球航线上的那些小石块都清除掉。但这次……你们没看新闻？这次地球要从小行星带正中穿过去！舰队只能对付那些大石块，唉……”</br>&emsp;&emsp;</br>&emsp;&emsp;在回亚洲的飞机上，加代子问我：“那些石块很大吗？”</br>&emsp;&emsp;</br>&emsp;&emsp;我父亲现在就在太空舰队干那件工作，所以尽管政府为了避免惊慌照例封锁消息，我还是知道一些情况。我告诉加代子，那些石块大的像一座大山，五千万吨级的热核炸弹只能在上面打出一个小坑。“他们就要使用人类手中威力最大的武器了！”</br>&emsp;&emsp;</br>&emsp;&emsp;我神秘地告诉加代子。</br>&emsp;&emsp;</br>&emsp;&emsp;“你是说反物质炸弹？”</br>&emsp;&emsp;</br>&emsp;&emsp;“还能是什么？”</br>&emsp;&emsp;</br>&emsp;&emsp;“太空舰队的巡航范围是多远？”</br>&emsp;&emsp;</br>&emsp;&emsp;“现在他们力量有限，我爸说只有一百五十万公里左右。”</br>&emsp;&emsp;</br>&emsp;&emsp;“啊，那我们能看到了！”</br>&emsp;&emsp;</br>&emsp;&emsp;</br>&emsp;&emsp;</br>&emsp;&emsp;“最好别看。”</br>&emsp;&emsp;</br>&emsp;&emsp;加代子还是看了，而且是没戴护目镜看的。反物质炸弹的第一次闪光是在我们起飞不久后从太空传来的，那时加代子正在欣赏飞机舷窗外空中的星星，这使她的双眼失明了一个多小时，以后的一个多月眼睛都红肿流泪。那真是让人心惊肉跳的时刻，反物质炮弹不断地击中小行星，湮灭的强光此起彼伏地在漆黑的太空中闪现，仿佛宇宙中有一群巨人围着地球用闪光灯疯狂拍照似的。</br>&emsp;&emsp;</br>&emsp;&emsp;半小时后，我们看到了火流星，它们拖着长长的火尾划破长空，给人一种恐怖的美感。火流星越来越多，每一个在空中划过的距离越来越长。突然，机身在一声巨响中震颤了一下，紧接着又是连续的巨响和震颤。加代子惊叫着扑到我怀中，她显然以为飞机被流星击中了，这时舱里响起了机长的声音。</br>&emsp;&emsp;</br>&emsp;&emsp;“请各位乘客不要惊慌，这是流星冲破音障产生的超音速爆音，请大家戴上耳机，否则您的听觉会受到永久的损害。由于飞行安全已无法保证，我们将在夏威夷紧急降落。”</br>&emsp;&emsp;</br>&emsp;&emsp;这时我盯住了一个火流星，那个火球的体积比别的大出许多，我不相信它能在大气中烧完。果然，那火球疾驰过大半个天空，越来越小，但还是坠入了冰海。从万米高空看到，海面被击中的位置出现了一个小白点，那白点立刻扩散成一个白色的圆圈，圆圈迅速在海面扩大。</br>&emsp;&emsp;</br>&emsp;&emsp;“那是浪吗？”加代子颤着声儿问我。</br>&emsp;&emsp;</br>&emsp;&emsp;“是浪，上百米的浪。不过海封冻了，冰面会很快使它衰减的。”我自我安慰地说，不再看下面。</br>&emsp;&emsp;</br>&emsp;&emsp;我们很快在檀香山降落，由当地政府安排去地下城。我们的汽车沿着海岸走，天空中布满了火流星，那些红发恶魔好像是从太空中的某一个点同时迸发出来的。</br>&emsp;&emsp;</br>&emsp;&emsp;一颗流星在距海岸不远处击中了海面，没有看到水柱，但水蒸汽形成的白色蘑菇云高高地升起。涌浪从冰层下传到岸边，厚厚的冰层轰隆隆地破碎了，冰面显出了浪的形状，好像有一群柔软的巨兽在下面排着队游过。</br>&emsp;&emsp;</br>&emsp;&emsp;“这块有多大？”我问那位来接应我们的官员。</br>&emsp;&emsp;</br>&emsp;&emsp;“不超过五公斤，不会比你的脑袋大吧。不过刚接到通知，在北方八百公里的海面上，刚落下一颗二十吨左右的。”</br>&emsp;&emsp;</br>&emsp;&emsp;这时他手腕上的通讯机响了，他看了一眼后对司机说：“来不及到204号门了，就近找个入口吧！”</br>&emsp;&emsp;</br>&emsp;&emsp;汽车拐了个弯，在一个地下城入口前停了下来。我们下车后，看到入口处有几个士兵，他们都一动不动地盯着远方的一个方向，眼里充满了恐惧。我们都顺着他们的目光看去，在天海连线处，我们看到一层黑色的屏障，初一看好像是天边低低的云层，但那“云层”的高度太齐了，像一堵横在天边的长墙，再仔细看，墙头还镶着一线白边。</br>&emsp;&emsp;</br>&emsp;&emsp;“那是什么呀？”加代子怯生生地问一个军官，得到的回答让我们毛发直竖。</br>&emsp;&emsp;</br>&emsp;&emsp;“浪。”</br>&emsp;&emsp;</br>&emsp;&emsp;地下城高大的铁门隆隆地关上了，约莫过了十分钟，我们感到从地面传来的低沉的声音，咕噜噜的，像一个巨人在地面打滚。我们面面相觑，大家都知道，百米高的巨浪正在滚过夏威夷，也将滚过各个大陆。但另一种震动更吓人，仿佛有一只巨拳从太空中不断地击打地球，在地下这震动并不大，只能隐约感到，但每一个震动都直达我们灵魂深处。这是流星在不断地击中地面。",
+notice:"流浪地球数据库",
+  },
+  
+})
+
+</script>
+
+
+</body>
+</html>

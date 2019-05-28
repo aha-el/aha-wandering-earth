@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运载车</title>
+    <link rel="stylesheet" media="screen" href="../css/particles.css">
+    <style>
+      p.head{
+        margin-top: 25px;
+        color: ivory;
+        text-align: center; 
+        font-size: 70px;
+        font-family: 华文行楷;
+      }
+      p.article {
+        background-color:rgba(103, 121, 53, 0.411);
+        padding: 15px;
+        line-height:50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        color: ivory;
+        margin-left:500px;
+        margin-right:500px;
+        text-align: left;
+        font-size: 30px;
+        font-family: FZDaBiaoSong-B06S;
+      }
+      p.link{
+        margin-top: 50px;
+        text-align: left;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+      p.link2{
+        margin-bottom: 50px;
+        text-align: right;
+        font-size: 50px;
+        text-decoration: underline;
+        padding: 2px;
+        font-family: 华文行楷;
+      }
+        body{
+            
+           background-image: url('../img/45.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+    
+</head>
+<body >
+ <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+ <div id="particles-js">  
+    <div id="app" >
+        <p class="link"><a style="color: rgba(39, 2, 250, 0.801);"href="../pages/database.html" v-html="notice">{{notice}}</a></p>
+      <p class="head" v-html="head" >{{head}}</p>
+      <p class="article" v-html="str">{{str}}</p>
+      <p class="link2"><a style="color: rgba(39, 2, 250, 0.904);"href="../pages/46.html" >春节十二响</a></p>
+
+    </div>
+</div>
+  
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/stats.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<script>
+//在“head”中写标题，“article”中写文章，“notice、href”中写网页名称、链接
+var page = new Vue({
+  el: '#app',
+  data: {
+    head:"运载车",
+    //空格用"&emsp;"(一个汉字空格)  换行用"</br>"
+    str: "&emsp;&emsp;首先我们能够看到，在流浪地球的表面温度达到了零下87摄氏度，这是一种非常极端的条件，而在现实中确实很多北方国家也有达到这种极寒条件的情况，但是在这个地方也是有汽车在运行的，所以机器可以在这样极寒的条件下工作，依照现在的汽车生产标准来说是完全有实力达到的。另外这款车的开启是有一款神奇的车钥匙，也就是韩朵朵老爷的身份识别卡，对于这种情况小编相信现在的技术也能够突破，因为现在的世界软件以及硬件系统非常的强大，做这样一个身份识别卡应该不在话下，而且现在很多车辆都采用无钥匙启动，以及将车钥匙塞入钥匙孔就会实现启动，所以做成这种效果非常容易。</br>&emsp;&emsp;当然，令人最印象深刻的是球形方向盘，对于这种方向盘很多人感觉比较新奇，因为在现在的汽车上并没有出现这种球形方向盘，那么这种球形方向盘在当今的技术情况下是否可以完成，对于这一点很多人还是表示疑问的，而专家也正是针对这一点进行的解答。其中专家说到：我们现在使用的汽车方向盘属于二维的汽车方向盘，也就是只能在同一表面转动而实现汽车的转向，而流浪地球中所出现的方向盘为球形方向盘，这种方向盘的运动角度是全方位的，而且不像我们现在所使用的方向盘，如果要想走直线的话必须进行回正，而这种球形方向盘则完全不用，只需要针对当前的运行路线进行稍作调整就行。",
+    notice:"流浪地球数据库",
+  },
+  
+})
+
+</script>
+
+
+</body>
+</html>
